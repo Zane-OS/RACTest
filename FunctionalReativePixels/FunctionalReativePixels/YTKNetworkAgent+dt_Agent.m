@@ -48,8 +48,8 @@
         //        NSString *value = object_getIvar(obj, ivar);
         if ([name isEqualToString:@"_manager"]) {
             AFHTTPSessionManager *dt_manager =  [AFHTTPSessionManager manager];
-            dt_manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html",@"text/plain",@"application/json",nil];
-            dt_manager.responseSerializer.stringEncoding = NSUTF8StringEncoding;
+            dt_manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+            dt_manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", nil];
             //  修改成员变量的值
             object_setIvar(self, ivar,dt_manager);
         }

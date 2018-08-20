@@ -11,12 +11,12 @@
 @implementation FRPApi
 
 - (NSString *)baseUrl {
-    return @"https://www.apiopen.top/meituApi";
+    return @"https://www.apiopen.top/login?key=00d91e8e0cca2b76f515926a36db68f5&phone=13594347817&passwd=123456";
 }
 
-- (id)requestArgument {
-    return @{@"page":@1};
-}
+//- (id)requestArgument {
+//    return @{@"page":@1};
+//}
 
 //- (nullable NSDictionary<NSString *, NSString *> *)requestHeaderFieldValueDictionary {
 //    NSMutableDictionary *dict = @{}.mutableCopy;

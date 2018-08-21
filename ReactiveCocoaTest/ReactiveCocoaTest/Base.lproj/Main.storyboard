@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -33,7 +34,36 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L81-51-kID">
+                                <rect key="frame" x="58" y="152" width="259" height="138"/>
+                                <color key="backgroundColor" red="1" green="0.416259765625" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="L81-51-kID" secondAttribute="height" multiplier="15:8" id="ilh-0e-JxC"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3E-qv-Lr4">
+                                <rect key="frame" x="164" y="328" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6yB-DV-MzJ">
+                                <rect key="frame" x="55" y="400" width="265" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="L81-51-kID" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="88" id="25o-TM-kR5"/>
+                            <constraint firstItem="f3E-qv-Lr4" firstAttribute="top" secondItem="L81-51-kID" secondAttribute="bottom" constant="38" id="A1R-fH-KtD"/>
+                            <constraint firstItem="6yB-DV-MzJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LSs-d1-5FA"/>
+                            <constraint firstItem="6yB-DV-MzJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="55" id="NVh-Wa-iwp"/>
+                            <constraint firstItem="L81-51-kID" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="58" id="gNd-wx-9Py"/>
+                            <constraint firstItem="f3E-qv-Lr4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hWg-np-D99"/>
+                            <constraint firstItem="L81-51-kID" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="j48-uO-JlV"/>
+                            <constraint firstItem="6yB-DV-MzJ" firstAttribute="top" secondItem="f3E-qv-Lr4" secondAttribute="bottom" constant="42" id="meb-0e-DfQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Cnf-gr-dHw">
@@ -43,6 +73,11 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="btn" destination="f3E-qv-Lr4" id="jvl-jV-n5L"/>
+                        <outlet property="redV" destination="L81-51-kID" id="gb2-3n-y9f"/>
+                        <outlet property="textField" destination="6yB-DV-MzJ" id="DMn-8q-bRf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
